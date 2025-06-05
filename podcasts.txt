@@ -1,0 +1,10 @@
+The Joe Rogan Experience|Conversacion|Joe Rogan|2009|4,5,4
+Serial|True Crime|Sarah Koenig|2014|5,5,4
+This American Life|Documental|Ira Glass|1995|4,4,5
+Radiolab|Ciencia|Jad Abumrad|2002|5,4,4
+TED Talks Daily|Educativo|TED|2006|4,5,3
+Stuff You Should Know|Educativo|Josh Clark|2008|4,4,4
+My Favorite Murder|True Crime|Karen Kilgariff|2016|4,3,4
+Conan O'Brien Needs a Friend|Comedia|Conan O'Brien|2018|5,4,5
+The Daily|Noticias|Michael Barbaro|2017|4,4,3
+Armchair Expert|Conversacion|Dax Shepard|2018|4,5,4 

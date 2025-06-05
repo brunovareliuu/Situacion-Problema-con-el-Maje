@@ -1,0 +1,3 @@
+Pelicula,El Padrino,Drama,175,Francis Ford Coppola
+Serie,Breaking Bad,Suspenso,45,Vince Gilligan
+Libro,Cien años de soledad,Realismo mágico,350,Gabriel García Márquez

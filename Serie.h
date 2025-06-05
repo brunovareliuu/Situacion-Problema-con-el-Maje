@@ -9,6 +9,7 @@ public:
 
     void mostrarInfo() const override;
     string tipo() const override;
+    string toFileString() const override;
 };
 
 #endif

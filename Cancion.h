@@ -13,6 +13,8 @@ public:
     Cancion(string t, string g, int d, string art);
     void mostrarInfo() const override;
     string tipo() const override;
+    string toFileString() const override;
+    string getArtista() const;
 };
 
 #endif

@@ -1,0 +1,10 @@
+Breaking Bad|Drama||2008|5,5,5
+Game of Thrones|Fantasia||2011|5,4,3
+Stranger Things|Ciencia Ficcion||2016|4,5,4
+Friends|Comedia||1994|4,4,5
+The Office|Comedia||2005|5,4,4
+Better Call Saul|Drama||2015|4,5,5
+Narcos|Drama||2015|4,4,4
+House of Cards|Drama||2013|4,3,4
+The Crown|Drama||2016|4,4,3
+Black Mirror|Ciencia Ficcion||2011|5,4,5 

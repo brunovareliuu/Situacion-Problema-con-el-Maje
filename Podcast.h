@@ -13,6 +13,8 @@ public:
     Podcast(string t, string g, int d, string p);
     void mostrarInfo() const override;
     string tipo() const override;
+    string toFileString() const override;
+    string getPresentador() const;
 };
 
 #endif

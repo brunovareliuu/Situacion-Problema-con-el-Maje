@@ -2,36 +2,54 @@
 #define SISTEMA_H
 
 #include "Usuario.h"
+#include "Entretenimiento.h"
 #include <vector>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
 class Sistema {
 private:
     vector<Usuario> usuarios;
-    Usuario* usuarioActual; // Puntero al usuario loggeado (y despues a nada si es que no hay usuario)
+    vector<Entretenimiento*> elementos;
+    Usuario* usuarioActual;
 
 public:
-    // Constructor
+    // Constructor y Destructor
     Sistema();
-
+    ~Sistema();
+    
     // Gestión de usuarios
-    // El bool es para ver si es verdadero que se registro o que esta dentro del sistema
-    // Si es falso, no se registro o no se loggeo
-    bool registrarUsuario(const string& nombre, const string& password, const string& genero, 
-                         const string& formato, const string& duracion);
+    bool registrarUsuario(const string& nombre, const string& password, 
+                         const string& genero, const string& formato, 
+                         const string& duracion);
     bool iniciarSesion(const string& nombre, const string& password);
     void cerrarSesion();
-    // El pointer al usuario actual
     Usuario* getUsuarioActual() const;
+    Usuario* buscarUsuario(const string& nombre);
 
-    // Archivos para guardar y cargar usuarios
+    // Gestión de archivos para usuarios
     void cargarUsuarios(const string& archivo);
     void guardarUsuarios(const string& archivo);
 
-    // Búsqueda para calificaciones y preferencias del usuario
-    Usuario* buscarUsuario(const string& nombre);
+    // Gestión de archivos para entretenimiento
+    void cargarDatosDesdeArchivos();
+    void guardarDatosEnArchivos();
+    void cargarElementos(const string& nombreArchivo, const string& tipo);
+    void guardarElementosPorTipo(const string& nombreArchivo, const string& tipo);
+
+    // Gestión de entretenimiento
+    void agregarElemento(Entretenimiento* elemento);
+    vector<Entretenimiento*> getElementos() const;
+    void mostrarElementos() const;
+    Entretenimiento* buscarElemento(const string& titulo) const;
+
+    // Gestión de calificaciones
+    bool actualizarCalificacion(const string& usuario, const string& elemento, 
+                               int nuevaCalif);
+    void mostrarRecomendaciones() const;
+    void mostrarTop10(const string& tipo = "") const;
 };
 
 #endif

@@ -1,0 +1,10 @@
+El Padrino|Drama||1972|5,5,4
+Pulp Fiction|Accion||1994|5,4,5
+Titanic|Romance||1997|4,4,3
+El Rey León|Animacion||1994|5,5,5
+Matrix|Ciencia Ficcion||1999|5,4,4
+Forrest Gump|Drama||1994|5,5,4
+Gladiador|Accion||2000|4,5,4
+El Señor de los Anillos|Fantasia||2001|5,5,5
+Avatar|Ciencia Ficcion||2009|4,3,4
+Interestelar|Ciencia Ficcion||2014|4,5,5 

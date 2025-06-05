@@ -13,6 +13,8 @@ public:
     Libro(string t, string g, int d, string a);
     void mostrarInfo() const override;
     string tipo() const override;
+    string toFileString() const override;
+    string getAutor() const;
 };
 
 #endif

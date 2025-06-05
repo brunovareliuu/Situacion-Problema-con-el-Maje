@@ -1,0 +1,10 @@
+Bohemian Rhapsody|Rock|Queen|1975|5,5,5
+Hotel California|Rock|Eagles|1976|5,4,5
+Imagine|Pop|John Lennon|1971|5,5,4
+Billie Jean|Pop|Michael Jackson|1983|4,5,5
+Stairway to Heaven|Rock|Led Zeppelin|1971|5,5,4
+Yesterday|Pop|The Beatles|1965|4,4,5
+Like a Rolling Stone|Rock|Bob Dylan|1965|4,5,4
+Smells Like Teen Spirit|Grunge|Nirvana|1991|5,4,4
+Purple Haze|Rock|Jimi Hendrix|1967|4,5,5
+Good Vibrations|Pop|The Beach Boys|1966|4,4,4 
