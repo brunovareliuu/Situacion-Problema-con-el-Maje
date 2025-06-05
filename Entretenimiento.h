@@ -16,8 +16,8 @@ protected:
 public:
     Entretenimiento(string t, string g, int d, int f = 0);
 
-    void setTitulo(const string t);
-    void setGenero(const string g);
+    void setTitulo(const string& t);
+    void setGenero(const string& g);
     void setDuracion(int d);
     void setFecha(int f);
 

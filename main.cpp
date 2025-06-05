@@ -10,22 +10,16 @@
 using namespace std;
 
 void mostrarMenu() {
-    cout << "\n===========================================" << endl;
-    cout << "    SISTEMA DE RECOMENDACIONES" << endl;
-    cout << "===========================================" << endl;
-    cout << "\n1. Registrar usuario" << endl;
-    cout << "2. Iniciar sesión" << endl;
-    cout << "3. Ver Top 10 general" << endl;
-    cout << "4. Ver Top 10 por categoría" << endl;
-    cout << "5. Calificar entretenimiento" << endl;
-    cout << "6. Ver recomendaciones personalizadas" << endl;
-    cout << "7. Mostrar todos los elementos" << endl;
-    cout << "8. Buscar elemento específico" << endl;
-    cout << "9. Agregar nuevo elemento" << endl;
-    cout << "10. Cambiar calificación" << endl;
-    cout << "11. Cerrar sesión" << endl;
-    cout << "0. Salir" << endl;
-    cout << "\nSeleccione una opción: ";
+    cout << "\n========================================" << endl;
+    cout << "        PLATAFORMA DIGITAL" << endl;
+    cout << "     Centro de Entretenimiento" << endl;
+    cout << "========================================" << endl;
+    cout << "" << endl;
+    cout << "  1. Crear nueva cuenta" << endl;
+    cout << "  2. Acceder al sistema" << endl;
+    cout << "  0. Terminar programa" << endl;
+    cout << "" << endl;
+    cout << "Elige una opcion: ";
 }
 
 void mostrarMenuCategorias(Sistema& sistema) {

@@ -7,4 +7,4 @@ Forrest Gump|Drama||1994|5,5,4
 Gladiador|Accion||2000|4,5,4
 El Señor de los Anillos|Fantasia||2001|5,5,5
 Avatar|Ciencia Ficcion||2009|4,3,4
-Interestelar|Ciencia Ficcion||2014|4,5,5 
+Interestelar|Ciencia Ficcion||2014|4,5,5

@@ -7,4 +7,4 @@ Orgullo y Prejuicio|Romance|Jane Austen|1813|4,5,4
 El Código Da Vinci|Misterio|Dan Brown|2003|4,3,4
 Crepúsculo|Romance|Stephenie Meyer|2005|3,4,3
 El Hobbit|Fantasia|J.R.R. Tolkien|1937|5,5,5
-Como agua para chocolate|Realismo Magico|Laura Esquivel|1989|4,5,4 
+Como agua para chocolate|Realismo Magico|Laura Esquivel|1989|4,5,4
