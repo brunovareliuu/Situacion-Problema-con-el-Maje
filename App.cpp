@@ -13,7 +13,7 @@ void mostrarMenuPrincipal() {
 }
 
 void mostrarMenuUsuario() {
-    cout << "Hola, " << usuario->getNombre() << endl;
+    cout << "Hola, Elige una Opción" << endl;
     cout << "1. Ver mis preferencias" << endl;
     cout << "2. Calificar elemento" << endl;
     cout << "3. Cerrar sesion" << endl;
