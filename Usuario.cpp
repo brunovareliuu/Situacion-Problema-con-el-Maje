@@ -1,82 +1,57 @@
 #include "Usuario.h"
 #include <iostream>
-#include <stdexcept>  // Para excepciones
-#include <algorithm>  // Para transformar cadenas a minúsculas
+#include <algorithm> // Para transform()
 
 using namespace std;
 
-// Constructor 
-Usuario::Usuario(string nombre, string password, Genero genero, string formato, Duracion duracion)
+// Constructor
+Usuario::Usuario(string nombre, string password, string genero, string formato, string duracion)
     : nombre(nombre), password(password), generoFavorito(genero),
-      formatoPreferido(formato), duracionPreferida(duracion) {
-}
+      formatoPreferido(formato), duracionPreferida(duracion) {}
 
 // Getters
 string Usuario::getNombre() const { return nombre; }
 string Usuario::getPassword() const { return password; }
-Genero Usuario::getGeneroFavorito() const { return generoFavorito; }
+string Usuario::getGeneroFavorito() const { return generoFavorito; }
 string Usuario::getFormatoPreferido() const { return formatoPreferido; }
-Duracion Usuario::getDuracionPreferida() const { return duracionPreferida; }
+string Usuario::getDuracionPreferida() const { return duracionPreferida; }
 
 // Setters
 void Usuario::setNombre(const string& nombre) { this->nombre = nombre; }
 void Usuario::setPassword(const string& password) { this->password = password; }
-void Usuario::setGeneroFavorito(Genero genero) { generoFavorito = genero; }
+void Usuario::setGeneroFavorito(const string& genero) { generoFavorito = genero; }
 void Usuario::setFormatoPreferido(const string& formato) { formatoPreferido = formato; }
-void Usuario::setDuracionPreferida(Duracion duracion) { duracionPreferida = duracion; }
+void Usuario::setDuracionPreferida(const string& duracion) { duracionPreferida = duracion; }
 
-// Método para agregar calificaciones con el nombre del elemento
+// Agregar calificación con validación básica
 void Usuario::agregarCalificacion(const string& nombreElemento, int puntuacion) {
-    // Validar rango
     if (puntuacion < 1 || puntuacion > 5) {
-        cout << "La calificación debe estar entre 1 y 5" << endl;
+        cout << "La calificación debe ser entre 1 y 5.";
+        return;
     }
-
-    // Agregar la nueva calificación
     calificaciones.emplace_back(nombreElemento, puntuacion);
 }
 
-// Getter para obtener todas las calificaciones
+// Getter de calificaciones con el pair
 const vector<pair<string, int>>& Usuario::getCalificaciones() const {
     return calificaciones;
 }
 
-// Método para mostrar las preferencias del usuario
+// Mostrar preferencias
 void Usuario::mostrarPreferencias() const {
     cout << "Preferencias de " << nombre << endl;
-    cout << "Género favorito: " << generoToString(generoFavorito) << endl;
+    cout << "Género favorito: " << generoFavorito << endl;
     cout << "Formato preferido: " << formatoPreferido << endl;
-    cout << "Duración preferida: " << duracionToString(duracionPreferida) << endl;
-    
-    // Mostrar la calificacion abajo pero asegurarnos que esta calificada
+    cout << "Duración preferida: " << duracionPreferida << endl;
+
+    // Mostrar calificaciones que ha dado el usuario
+    cout << "Tus Calificaciones" << endl;
     if (!calificaciones.empty()) {
         cout << "\nCalificaciones:" << endl;
         for (const auto& [elemento, puntuacion] : calificaciones) {
-            cout << "( " << elemento << ": " << puntuacion << "/5 )" << endl;
+            cout << "- " << elemento << ": " << puntuacion << "/5" << endl;
         }
     } else {
-        cout << "Aún no has calificado nada" << endl;
-    }
-}
-
-// Conversión de Genero a string
-string Usuario::generoToString(Genero genero) {
-    switch (genero) {
-        case Genero::TERROR:     return "Terror";
-        case Genero::ACCION:     return "Acción";
-        case Genero::ROMANCE:    return "Romance";
-        case Genero::PSICOLOGIA: return "Psicología";
-        case Genero::DIVERSION:  return "Diversión";
-        default:                 return "No Asignado";
-    }
-}
-
-// Conversión de Duracion a string
-string Usuario::duracionToString(Duracion duracion) {
-    switch (duracion) {
-        case Duracion::CORTA:   return "Corta (< 30 min)";
-        case Duracion::MEDIANA: return "Mediana (30-90 min)";
-        case Duracion::LARGA:   return "Larga (> 90 min)";
-        default:                return "Duración desconocida";
+        cout << "\nAún no has calificado ningun elemento." << endl;
     }
 }
