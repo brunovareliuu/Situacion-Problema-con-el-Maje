@@ -8,10 +8,10 @@ Pelicula::Pelicula(string t, string g, int d)
 
 // Implementamos los métodos virtuales
 void Pelicula::mostrarInfo() const {
-    cout << "Película: " << titulo << endl;
-    cout << "Género: " << genero << endl;
-    cout << "Duración: " << duracion << " minutos" << endl;
-    cout << "Calificación promedio: " << promedioCalificaciones() << endl;
+    cout << "- Película: " << titulo << endl;
+    cout << "- Género: " << genero << endl;
+    cout << "- Duración: " << duracion << " minutos" << endl;
+    cout << "- Calificación promedio: " << promedioCalificaciones() << endl;
 }
 
 string Pelicula::tipo() const {
