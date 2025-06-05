@@ -1,7 +1,6 @@
 #ifndef ENTRETENIMIENTO_H
 #define ENTRETENIMIENTO_H
 
-#include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
@@ -10,43 +9,28 @@ class Entretenimiento {
 protected:
     string titulo;
     string genero;
-    int anio;
-    double calificacionPromedio;
-    vector<int> calificaciones;
-    int totalCalificaciones;
+    int duracion;
+    vector<int> calificaciones; //Lo hacemos vector para mas calificaciones
 
 public:
-    // Constructor
-    Entretenimiento(const string& titulo, const string& genero, int anio);
-    
-    // Destructor virtual
-    virtual ~Entretenimiento() {}
-    
-    // Métodos virtuales puros (clase abstracta)
-    virtual void mostrarInfo() const = 0;
-    virtual string getTipo() const = 0;
-    
-    // Métodos virtuales
-    virtual void mostrarDetalles() const;
-    
-    // Getters
-    string getTitulo() const { return titulo; }
-    string getGenero() const { return genero; }
-    int getAnio() const { return anio; }
-    double getCalificacionPromedio() const { return calificacionPromedio; }
-    int getTotalCalificaciones() const { return totalCalificaciones; }
-    
-    // Setters
-    void setTitulo(const string& titulo) { this->titulo = titulo; }
-    void setGenero(const string& genero) { this->genero = genero; }
-    void setAnio(int anio) { this->anio = anio; }
-    
-    // Métodos para calificaciones
+    Entretenimiento(string t, string g, int d);
+
+    void setTitulo(const string& t);
+    void setGenero(const string& g);
+    void setDuracion(int d);
+
+    string getTitulo() const;
+    string getGenero() const;
+    int getDuracion() const;
+
     void agregarCalificacion(int calificacion);
-    void calcularCalificacionPromedio();
     
-    // Método para validar calificación
-    static bool validarCalificacion(int calificacion);
+    vector<int> getCalificaciones() const;
+    
+    float promedioCalificaciones() const;
+
+    virtual void mostrarInfo() const = 0; // método puro: clase abstracta
+    virtual string tipo() const = 0;
 };
 
 #endif

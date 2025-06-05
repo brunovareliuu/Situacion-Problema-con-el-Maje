@@ -1,46 +1,65 @@
+#include <string>
 #include "Entretenimiento.h"
-#include <iostream>
-#include <iomanip>
+#include <vector>
+#include <numeric>
 using namespace std;
 
 // Constructor
-Entretenimiento::Entretenimiento(const string& titulo, const string& genero, int anio) 
-    : titulo(titulo), genero(genero), anio(anio), calificacionPromedio(0.0), totalCalificaciones(0) {}
+Entretenimiento::Entretenimiento(string t, string g, int d)
+    : titulo(t), genero(g), duracion(d) {}
 
-// Método virtual para mostrar detalles básicos
-void Entretenimiento::mostrarDetalles() const {
-    cout << "=====================================\n";
-    cout << "Título: " << titulo << endl;
-    cout << "Género: " << genero << endl;
-    cout << "Año: " << anio << endl;
-    cout << "Calificación promedio: " << fixed << setprecision(1) << calificacionPromedio << "/5.0" << endl;
-    cout << "Total de calificaciones: " << totalCalificaciones << endl;
-    cout << "=====================================\n";
+// Setters
+void Entretenimiento::setTitulo(const string& t) {
+    titulo = t;
 }
 
-// Agregar una calificación nueva
+void Entretenimiento::setGenero(const string& g) {
+    genero = g;
+}
+
+void Entretenimiento::setDuracion(int d) {
+    duracion = d;
+}
+
+// Getters
+string Entretenimiento::getTitulo() const {
+    return titulo;
+}
+
+string Entretenimiento::getGenero() const {
+    return genero;
+}
+
+int Entretenimiento::getDuracion() const {
+    return duracion;
+}
+
+vector<int> Entretenimiento::getCalificaciones() const {
+    return calificaciones;
+}
+
+// Método para agregar una nueva calificación
 void Entretenimiento::agregarCalificacion(int calificacion) {
-    if (validarCalificacion(calificacion)) {
-        calificaciones.push_back(calificacion);
-        totalCalificaciones++;
-        calcularCalificacionPromedio();
-    } else {
-        cout << "Error: La calificación debe estar entre 1 y 5" << endl;
+    if (calificacion >= 1 && calificacion <= 5) { //La ponemos en el rango
+        calificaciones.push_back(calificacion); //Pusback es ponerlo al final del vector calificaciones
     }
+    // Aquí podrías lanzar una excepción si quieres manejar errores más adelante
 }
 
-// Calcular el promedio de calificaciones
-void Entretenimiento::calcularCalificacionPromedio() {
-    if (totalCalificaciones > 0) {
-        double suma = 0;
-        for (int cal : calificaciones) {
-            suma += cal;
-        }
-        calificacionPromedio = suma / totalCalificaciones;
+// Método para calcular el promedio de calificaciones
+float Entretenimiento::promedioCalificaciones() const {
+    if (calificaciones.empty()) {
+        return 0.0f; //la f es para poner que es float
     }
-}
 
-// Validar que la calificación esté en el rango correcto
-bool Entretenimiento::validarCalificacion(int calificacion) {
-    return calificacion >= 1 && calificacion <= 5;
-} 
+    //Lo ponemos en float para que no de enteroes en el promedio
+    float suma = 0;
+    float contador = 0;
+
+    for (int i = 0; i < calificaciones.size(); i++) {
+        suma += calificaciones[i];
+        contador++;
+    }
+    float promedio = suma / contador;
+    return promedio;
+}
