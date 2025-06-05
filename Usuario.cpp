@@ -44,7 +44,7 @@ void Usuario::mostrarPreferencias() const {
     cout << "Formato preferido: " << formatoPreferido << endl;
     cout << "Duración preferida: " << duracionPreferida << endl;
 
-    // Mostrar calificaciones que ha dado el usuario
+    // Mostrar calificaciones que ha dado el usuario, el .empty es que si el vector no esta empty se pone el if, y si no pues se sale y pone ese mensaje
     cout << "Tus Calificaciones" << endl;
     if (!calificaciones.empty()) {
         cout << "\nCalificaciones:" << endl;
